@@ -1,0 +1,13 @@
+<p>{{stories}}</p>
+<ul>
+    <li *ngFor="let story of stories" [class.selected] = "story === selectedStory" (click)="onSelected(story)">
+        <span >{{story.header}}</span>
+    </li>
+</ul>
+
+<div *ngIf="selectedStory">
+    selecte stroy {{selectedStory.content}}
+</div>
+
+
+
